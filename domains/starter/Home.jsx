@@ -28,7 +28,8 @@ exports.view = (
     <Paper kind="full">
       <FlexBox direction="row">
         <Text kind="title">Hello from the FlexBox</Text>
-        <Button id="Login" activity="Login"/>
+        <Button id="1" text="Login" activity="Login" />
+        <Button id="2" text="News" activity="News" />
       </FlexBox>
     </Paper>
   </div>
