@@ -14,7 +14,7 @@ var concat = function (array, ...items) {
 };
 
 var getText = function (obj, what) {
-  return obj.props.id;
+  return obj.props.text || obj.props.id;
 };
 
 var getStyle = function (obj, ...styles) {
