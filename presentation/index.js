@@ -6,17 +6,20 @@ var activityStack = [];
 var Actions = Reflux.createActions ([
   'render',
   'run',
-  'doAction'
+  'doAction',
+  'startActivity'
 ]);
 
-Actions.render.listen ((obj, activity) => {
-  if (activityStack.length && activityStack[0].activity === activity) {
+Actions.startActivity.listen ((obj, activityId) => {
+  if (activityStack.length && activityStack[0].activityId === activityId) {
     return;
   }
   activityStack.unshift ({
     component: obj,
-    activity:  activity
+    activityId:  activityId
   });
+
+  Actions.render (activityStack);
 });
 
 Actions.run.listen ((obj, cmd) => {
@@ -26,7 +29,7 @@ Actions.run.listen ((obj, cmd) => {
 Actions.doAction.listen ((obj, action) => {
   if (action === 'Dismiss') {
     activityStack.shift ();
-    Actions.render (activityStack[0].component, activityStack[0].activity);
+    Actions.render (activityStack);
   }
 });
 

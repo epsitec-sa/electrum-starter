@@ -4,7 +4,7 @@ var P = require ('presentation');
 
 var dispatch = function dispatch (obj, id) {
   if (obj.props.activity) {
-    P.render (obj, id);
+    P.startActivity (obj, obj.props.activity);
   }
 
   if (obj.props.cmd) {

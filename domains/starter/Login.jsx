@@ -9,13 +9,14 @@ var LabelField   = A.LabelField;
 var Paper        = A.Paper;
 var Button       = A.Button;
 
-module.exports = (
-  <AppCanvas>
-    <DialogWindow z-index={1}>
-      <Paper>
-        <LabelField id="blabla">Blabla</LabelField>
-        <Button cmd="DoLogin" />
-      </Paper>
-    </DialogWindow>
-  </AppCanvas>
+exports.display = {
+  mode: 'modal'
+};
+
+exports.view = (
+  <Paper kind="full">
+    <LabelField>User</LabelField>
+    <Button kind="accept" cmd="DoLogin" text="Login" />
+    <Button action="Dismiss" text="Cancel" />
+  </Paper>
 );

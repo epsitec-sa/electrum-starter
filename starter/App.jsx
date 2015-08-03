@@ -7,7 +7,7 @@ var Desktop = require ('./Desktop.jsx');
 
 var renderDesktop = function () {
   React.render (
-    <Desktop activities={domain.activities} activity="Home" />,
+    <Desktop activities={domain.activities} activityId="Home" />,
     document.body
   );
 };

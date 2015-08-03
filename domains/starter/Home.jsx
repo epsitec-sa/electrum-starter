@@ -3,19 +3,20 @@
 var React = require ('react');
 var A     = require ('arc');
 
-var AppCanvas      = A.AppCanvas;
 var Button         = A.Button;
 var FlexBox        = A.FlexBox;
-var GoogleFontHack = A.GoogleFontHack;
 var Link           = A.Link;
 var Menu           = A.Menu;
 var Paper          = A.Paper;
 var SidePanel      = A.SidePanel;
 var Text           = A.Text;
 
-module.exports = (
-  <AppCanvas>
-    <GoogleFontHack />
+exports.display = {
+  mode: 'fullscreen'
+};
+
+exports.view = (
+  <div>
     <SidePanel side="bottom" overlay={false}>
       <Paper kind="header">
         <Text>Paper in side panel</Text>
@@ -30,5 +31,5 @@ module.exports = (
         <Button id="Login" activity="Login"/>
       </FlexBox>
     </Paper>
-  </AppCanvas>
+  </div>
 );
