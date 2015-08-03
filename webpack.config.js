@@ -10,7 +10,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './starter/app.jsx'
+    './starter/App.jsx'
   ],
   output: {
     publicPath: 'http://localhost:3000/',
