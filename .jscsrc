@@ -29,8 +29,6 @@
 
   "disallowEmptyBlocks":                      true,
   "disallowKeywordsOnNewLine":                ["else", "catch"],
-  "disallowNewlineBeforeBlockStatements":     false,
-  "disallowPaddingNewlinesInBlocks":          true,
   "disallowQuotedKeysInObjects":              true,
   "disallowMixedSpacesAndTabs":               true,
   "disallowTrailingWhitespace":               true,
@@ -48,11 +46,13 @@
   "safeContextKeyword":                       ["self"],
 
   "validateIndentation":                      2,
-  "validateJSDoc": {
+
+  "jsDoc": {
     "checkParamNames":                        true,
     "checkRedundantParams":                   true,
     "requireParamTypes":                      true
   },
+
   "validateParameterSeparator":               ", ",
   "validateQuoteMarks":                       "'",
 
